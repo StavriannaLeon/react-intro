@@ -9,7 +9,7 @@ const FunctionalComponentWithState = () => {
     }
 
     const decreaseCount : () => void = () => {
-        if (count >0) {
+        if (count > 0) {
             setCount(count - 1)
         }
     }
