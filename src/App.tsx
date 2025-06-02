@@ -14,7 +14,8 @@ import Layout from "./components/Layout.tsx";
 // import CounterAdvanced from "./components/CounterAdvanced.tsx";
 // import CounterAdvancedWithCustomHook from "./components/CounterAdvancedWithCustomHook";
 // import CounterWithReducer from "./components/CounterWithReducer.tsx";
-import Todo from "./components/Todo/Todo.tsx";
+// import Todo from "./components/Todo/Todo.tsx";
+import OnlineStatus from "./components/OnlineStatus.tsx";
 
 function App() {
 
@@ -35,19 +36,6 @@ function App() {
                 {/*  description="this is a description"*/}
                 {/*/>*/}
 
-            {/*<ClassComponentWithState/>*/}
-            {/*<FunctionalComponentWithState/>*/}
-            {/*<Counter/>*/}
-            {/*<NameChanger/>*/}
-            {/*<CounterWithMoreStates/>*/}
-            {/*<CounterAdvanced/>*/}
-            {/*<CounterWithCustomHook/>*/}
-            {/*<CounterAdvancedWithCustomHook/>*/}
-            {/*<CounterWithReducer/>*/}
-            <Todo/>
-        </Layout>
-    </>
-  )
                 {/*<ClassComponentWithState/>*/}
                 {/*<FunctionalComponentWithState/>*/}
                 {/*<Counter/>*/}
@@ -58,6 +46,8 @@ function App() {
                 {/*<CounterAdvancedWithCustomHook/>*/}
 
                 {/*<CounterWithReducer/>*/}
+                {/*<Todo/>*/}
+                <OnlineStatus/>
 
             </Layout>
         </>
