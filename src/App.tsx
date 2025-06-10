@@ -21,6 +21,7 @@ import HomePage from "./pages/HomePage.tsx";
 import NameChangerPage from "./pages/NameChangerPage.tsx";
 import OnlineStatusPage from "./pages/OnlineStatusPage.tsx";
 import UserPage from "./components/UserPage.tsx";
+import NotFoundPage from "./pages/NotFoundPage.tsx";
 
 function App() {
 
@@ -69,6 +70,8 @@ function App() {
                             <Route path="online-status" element={<OnlineStatusPage/>} />
                         </Route>
                         <Route path="users/:userID" element={<UserPage/>} /> {/* : | path parameter */}
+                        <Route path="*" element={<NotFoundPage/>} />
+                        {/* NotFoundPage has to be put last | * = all */}
                     </Routes>
                 </Layout>
             </BrowserRouter>
