@@ -79,7 +79,7 @@ function App() {
                         <Route path="users" element={<UserPage/>} />
                         {/*<Route path="files/*" element={<FilePage/>} /> /!* star segment = all *!/*/}
                         <Route path="*" element={<NotFoundPage/>} />
-                        {/* NotFoundPage has to be put last | * = all */}
+                        {/* NotFoundPage has to be put last */}
                     </Routes>
                 {/*</Layout>*/}
             </BrowserRouter>
