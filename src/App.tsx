@@ -22,6 +22,7 @@ import NameChangerPage from "./pages/NameChangerPage.tsx";
 import OnlineStatusPage from "./pages/OnlineStatusPage.tsx";
 import UserPage from "./components/UserPage.tsx";
 import NotFoundPage from "./pages/NotFoundPage.tsx";
+import FocusInput from "./components/FocusInput.tsx";
 import RouterLayout from "./components/RouterLayout.tsx";
 import ExamplesPage from "./components/ExamplesPage.tsx";
 import RouterExamplesLayout from "./components/RouterExamplesLayout.tsx";
@@ -69,6 +70,7 @@ function App() {
                             <Route index element={<HomePage/>} />
                         </Route>
 
+                        <Route index element={<FocusInput/>} />
 
                         {/*<Route path="examples/name-changer" element={<NameChangerPage/>} />*/}
                         {/*<Route path="examples/online-status" element={<OnlineStatus/>} />*/}
