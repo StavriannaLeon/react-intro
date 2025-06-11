@@ -28,6 +28,7 @@ import RouterLayout from "./components/RouterLayout.tsx";
 import ExamplesPage from "./components/ExamplesPage.tsx";
 import RouterExamplesLayout from "./components/RouterExamplesLayout.tsx";
 import AutoRedirectPage from "./pages/AutoRedirectPage.tsx";
+import ControlledInput from "./components/ControlledInput.tsx";
 
 function App() {
 
@@ -70,7 +71,6 @@ function App() {
                             <Route path="focus-input" element={<FocusInput/>} />
                             <Route path="users/:userID" element={<UserPage/>} /> {/* : | path parameter */}
                             <Route path="users" element={<UserPage/>} />
-                            <Route path="uncontrolled-input" element={<UncontrolledInput/>} />
                         </Route>
 
                         {/*<Route path="examples/name-changer" element={<NameChangerPage/>} />*/}
@@ -82,6 +82,9 @@ function App() {
                             <Route path="name-changer" element={<NameChangerPage/>} />
                             <Route path="online-status" element={<OnlineStatusPage/>} />
                             <Route path="auto-redirect" element={<AutoRedirectPage/>} />
+                            <Route path="controlled-input" element={<ControlledInput />}/>
+                            <Route path="uncontrolled-input" element={<UncontrolledInput />}/>
+                            <Route path="focus-input" element={<FocusInput />}/>
                         </Route>
 
                         {/*<Route path="files/*" element={<FilePage/>} /> /!* star segment = all *!/*/}
