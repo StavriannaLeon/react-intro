@@ -29,6 +29,7 @@ import ExamplesPage from "./components/ExamplesPage.tsx";
 import RouterExamplesLayout from "./components/RouterExamplesLayout.tsx";
 import AutoRedirectPage from "./pages/AutoRedirectPage.tsx";
 import ControlledInput from "./components/ControlledInput.tsx";
+import MultiFieldForm from "./components/MultiFieldForm.tsx";
 
 function App() {
 
@@ -68,7 +69,7 @@ function App() {
                         <Route element={<RouterLayout/>}>
                             {/*<Route path="/" element={<HomePage/>} />*/} {/* same with: */}
                             <Route index element={<HomePage/>} />
-                            <Route path="focus-input" element={<FocusInput/>} />
+                            <Route path="multi-field-form" element={<MultiFieldForm/>} />
                             <Route path="users/:userID" element={<UserPage/>} /> {/* : | path parameter */}
                             <Route path="users" element={<UserPage/>} />
                         </Route>
