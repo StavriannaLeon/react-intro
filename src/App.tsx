@@ -17,7 +17,7 @@
 // import Todo from "./components/Todo/Todo.tsx";
 // import OnlineStatus from "./components/OnlineStatus.tsx";
 import {BrowserRouter, Routes, Route} from "react-router";
-import HomePage from "./pages/HomePage.tsx";
+// import HomePage from "./pages/HomePage.tsx";
 import NameChangerPage from "./pages/NameChangerPage.tsx";
 import OnlineStatusPage from "./pages/OnlineStatusPage.tsx";
 import UserPage from "./components/UserPage.tsx";
@@ -29,7 +29,8 @@ import ExamplesPage from "./components/ExamplesPage.tsx";
 import RouterExamplesLayout from "./components/RouterExamplesLayout.tsx";
 import AutoRedirectPage from "./pages/AutoRedirectPage.tsx";
 import ControlledInput from "./components/ControlledInput.tsx";
-import MultiFieldForm from "./components/MultiFieldForm.tsx";
+// import MultiFieldForm from "./components/MultiFieldForm.tsx";
+import MultiFieldFormWithValidation from "./components/MultiFieldFormWithValidation.tsx";
 
 function App() {
 
@@ -68,8 +69,9 @@ function App() {
                     <Routes>
                         <Route element={<RouterLayout/>}>
                             {/*<Route path="/" element={<HomePage/>} />*/} {/* same with: */}
-                            <Route index element={<HomePage/>} />
-                            <Route path="multi-field-form" element={<MultiFieldForm/>} />
+                            {/*<Route index element={<HomePage/>} />*/}
+                            {/*<Route path="multi-field-form" element={<MultiFieldForm/>} />*/}
+                            <Route index element={<MultiFieldFormWithValidation/>} />
                             <Route path="users/:userID" element={<UserPage/>} /> {/* : | path parameter */}
                             <Route path="users" element={<UserPage/>} />
                         </Route>
