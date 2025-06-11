@@ -23,6 +23,8 @@ import OnlineStatusPage from "./pages/OnlineStatusPage.tsx";
 import UserPage from "./components/UserPage.tsx";
 import NotFoundPage from "./pages/NotFoundPage.tsx";
 import RouterLayout from "./components/RouterLayout.tsx";
+import ExamplesPage from "./components/ExamplesPage.tsx";
+import RouterExamplesLayout from "./components/RouterExamplesLayout.tsx";
 
 function App() {
 
@@ -58,7 +60,6 @@ function App() {
             {/*</Layout>*/}
 
             <BrowserRouter>
-                {/*<Layout>*/}
                     <Routes>
                         {/*<Route path="/" element={<HomePage/>} />*/} {/* same with: */}
                         <Route index element={<HomePage/>} />
@@ -71,7 +72,9 @@ function App() {
                         {/*<Route path="examples/name-changer" element={<NameChangerPage/>} />*/}
                         {/*<Route path="examples/online-status" element={<OnlineStatus/>} />*/}
 
-                        <Route path="examples?"> {/* optional segments | "/examples/" in the url can be omitted */}
+                        {/*<Route path="examples?"> /!* optional segments | "/examples/" in the url can be omitted *!/*/}
+                        <Route path="examples" element={<RouterExamplesLayout/>}>
+                            <Route index element={<ExamplesPage/>} /> {/* here index = /examples/ */}
                             <Route path="name-changer" element={<NameChangerPage/>} />
                             <Route path="online-status" element={<OnlineStatusPage/>} />
                         </Route>
@@ -81,7 +84,6 @@ function App() {
                         <Route path="*" element={<NotFoundPage/>} />
                         {/* NotFoundPage has to be put last */}
                     </Routes>
-                {/*</Layout>*/}
             </BrowserRouter>
         </>
     )
