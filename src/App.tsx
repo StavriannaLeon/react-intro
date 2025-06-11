@@ -64,15 +64,14 @@ function App() {
 
             <BrowserRouter>
                     <Routes>
-                        {/*<Route path="/" element={<HomePage/>} />*/} {/* same with: */}
-                        <Route index element={<HomePage/>} />
                         <Route element={<RouterLayout/>}>
                             {/*<Route path="/" element={<HomePage/>} />*/} {/* same with: */}
                             <Route index element={<HomePage/>} />
+                            <Route path="focus-input" element={<FocusInput/>} />
+                            <Route path="users/:userID" element={<UserPage/>} /> {/* : | path parameter */}
+                            <Route path="users" element={<UserPage/>} />
+                            <Route path="uncontrolled-input" element={<UncontrolledInput/>} />
                         </Route>
-
-                        <Route index element={<FocusInput/>} />
-                        <Route path="uncontrolled-input" element={<UncontrolledInput/>} />
 
                         {/*<Route path="examples/name-changer" element={<NameChangerPage/>} />*/}
                         {/*<Route path="examples/online-status" element={<OnlineStatus/>} />*/}
@@ -84,8 +83,7 @@ function App() {
                             <Route path="online-status" element={<OnlineStatusPage/>} />
                             <Route path="auto-redirect" element={<AutoRedirectPage/>} />
                         </Route>
-                        <Route path="users/:userID" element={<UserPage/>} /> {/* : | path parameter */}
-                        <Route path="users" element={<UserPage/>} />
+
                         {/*<Route path="files/*" element={<FilePage/>} /> /!* star segment = all *!/*/}
                         <Route path="*" element={<NotFoundPage/>} />
                         {/* NotFoundPage has to be put last */}
