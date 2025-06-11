@@ -3,7 +3,7 @@
 // import ArrowFunctionalComponent from "./components/ArrowFunctionalComponent.tsx";
 // import ArrowFunctionalComponentWithProps from "./components/ArrowFunctionalComponentWithProps.tsx";
 // import ArrowFunctionalComponentWithPropsType from "./components/ArrowFunctionalComponentWithPropsType.tsx";
-import Layout from "./components/Layout.tsx";
+// import Layout from "./components/Layout.tsx";
 // import ClassComponentWithState from "./components/ClassComponentWithState.tsx";
 // import FunctionalComponentWithState from "./components/FunctionalComponentWithState.tsx";
 // import Counter from "./components/Counter.tsx";
@@ -22,6 +22,7 @@ import NameChangerPage from "./pages/NameChangerPage.tsx";
 import OnlineStatusPage from "./pages/OnlineStatusPage.tsx";
 import UserPage from "./components/UserPage.tsx";
 import NotFoundPage from "./pages/NotFoundPage.tsx";
+import RouterLayout from "./components/RouterLayout.tsx";
 
 function App() {
 
@@ -57,10 +58,15 @@ function App() {
             {/*</Layout>*/}
 
             <BrowserRouter>
-                <Layout>
+                {/*<Layout>*/}
                     <Routes>
                         {/*<Route path="/" element={<HomePage/>} />*/} {/* same with: */}
                         <Route index element={<HomePage/>} />
+                        <Route element={<RouterLayout/>}>
+                            {/*<Route path="/" element={<HomePage/>} />*/} {/* same with: */}
+                            <Route index element={<HomePage/>} />
+                        </Route>
+
 
                         {/*<Route path="examples/name-changer" element={<NameChangerPage/>} />*/}
                         {/*<Route path="examples/online-status" element={<OnlineStatus/>} />*/}
@@ -70,10 +76,12 @@ function App() {
                             <Route path="online-status" element={<OnlineStatusPage/>} />
                         </Route>
                         <Route path="users/:userID" element={<UserPage/>} /> {/* : | path parameter */}
+                        <Route path="users" element={<UserPage/>} />
+                        {/*<Route path="files/*" element={<FilePage/>} /> /!* star segment = all *!/*/}
                         <Route path="*" element={<NotFoundPage/>} />
                         {/* NotFoundPage has to be put last | * = all */}
                     </Routes>
-                </Layout>
+                {/*</Layout>*/}
             </BrowserRouter>
         </>
     )
