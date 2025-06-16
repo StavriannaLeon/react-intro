@@ -76,6 +76,7 @@ const MultiFieldFormWithValidation = () => {
 
     const handleClear = () => {
         setValues(initialValues);
+        setErrors(null); // clears error messages when form is reset
         setSubmittedData(null);
     };
 
