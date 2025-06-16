@@ -31,7 +31,8 @@ import AutoRedirectPage from "./pages/AutoRedirectPage.tsx";
 import ControlledInput from "./components/ControlledInput.tsx";
 // import MultiFieldForm from "./components/MultiFieldForm.tsx";
 // import MultiFieldFormWithValidation from "./components/MultiFieldFormWithValidation.tsx";
-import MultiFieldFormWithZodValidation from "./components/MultiFieldFormWithZodValidation.tsx";
+// import MultiFieldFormWithZodValidation from "./components/MultiFieldFormWithZodValidation.tsx";
+import MultiFieldFormWIthReactHook from "./components/MultiFieldFormWIthReactHook.tsx";
 
 function App() {
 
@@ -73,7 +74,8 @@ function App() {
                             {/*<Route index element={<HomePage/>} />*/}
                             {/*<Route path="multi-field-form" element={<MultiFieldForm/>} />*/}
                             {/*<Route index element={<MultiFieldFormWithValidation/>} />*/}
-                            <Route index element={<MultiFieldFormWithZodValidation/>} />
+                            {/*<Route index element={<MultiFieldFormWithZodValidation/>} />*/}
+                            <Route index element={<MultiFieldFormWIthReactHook/>} />
                             <Route path="users/:userID" element={<UserPage/>} /> {/* : | path parameter */}
                             <Route path="users" element={<UserPage/>} />
                         </Route>
